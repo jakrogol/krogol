@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob &amp; Amanda</title>
+  <style>
+    /* Reset & basic typography */
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Fixed, blurred background image  */
+    /* Replace hands.jpg with the real photo path (same folder or a CDN) */
+    .hero {
+      position: fixed;
+      inset: 0;
+      background: url("hands.jpg") center / cover no-repeat;
+      filter: blur(8px);
+      z-index: -2;
+    }
+
+    /* Dark overlay to improve text contrast */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+
+    /* Flexbox centering for the top message */
+    .intro {
+      min-height: 100vh;      /* full viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .intro h1, .intro h2 { margin: 0.5rem 0; }
+
+    /* Prayer section: uses padding to force user scroll a bit */
+    .prayer {
+      padding: 40vh 1rem 6rem; /* top padding pushes start below the fold */
+      font-size: 1.25rem;
+    }
+
+    footer {
+      font-size: 0.875rem;
+      padding: 2rem 1rem;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero"></div>
+  <div class="overlay"></div>
+
+  <main class="intro">
+    <h1>Jacob is a web developer.</h1>
+    <h1>Amanda is an educator.</h1>
+    <h2>We hope we made your day a tiny bit better.</h2>
+  </main>
+
+  <section class="prayer">
+    <p>
+      Glory Be to the Father, and to the Son, and to the Holy Spirit,<br>
+      As it was in the beginning, is now, and ever shall be, world without end.<br>
+      Amen.
+    </p>
+  </section>
+
+  <footer>&copy; 2025 The Krogol Group</footer>
+</body>
+</html>
